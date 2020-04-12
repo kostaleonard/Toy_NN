@@ -18,3 +18,6 @@ On any other system (probably your machine!), run the project in a Docker contai
 make
 ```
 
+To view the datasets, try using `scp` to transfer the files to your host OS.
+```scp data_plot_*.png leo@10.0.0.157:~/Downloads/```
+
