@@ -30,7 +30,7 @@ docker:
 	docker run --name toy_nn_container -it toy_nn_image
 
 clean:
-	rm $(default_train_dataset_name)
-	rm $(default_test_dataset_name)
-	rm $(default_train_plot_name)
-	rm $(default_test_plot_name)
+	-rm -f $(default_train_dataset_name)
+	-rm -f $(default_test_dataset_name)
+	-rm -f $(default_train_plot_name)
+	-rm -f $(default_test_plot_name)
