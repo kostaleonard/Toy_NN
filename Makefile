@@ -34,3 +34,7 @@ clean:
 	-rm -f $(default_test_dataset_name)
 	-rm -f $(default_train_plot_name)
 	-rm -f $(default_test_plot_name)
+	-docker rm --force toy_nn_container
+	-docker image rm --force toy_nn_image
+	-docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
+	-docker image rm --force tensorflow/tensorflow
