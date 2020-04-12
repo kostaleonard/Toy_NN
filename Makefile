@@ -26,6 +26,7 @@ dataset_test:
 docker:
 	echo "Building the docker image and running the container."
 	docker build -t toy_nn_image .
+	-docker rm --force toy_nn_container
 	docker run --name toy_nn_container -it toy_nn_image
 
 clean:
