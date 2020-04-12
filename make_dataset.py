@@ -5,6 +5,8 @@ import numpy as np
 import scipy.stats
 import random
 import h5py
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 
 DEFAULT_NUM_EXAMPLES = 1000

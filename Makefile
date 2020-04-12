@@ -23,6 +23,11 @@ dataset_test:
 	echo "Trying default python installation:"
 	python make_dataset.py --n $(default_test_dataset_size) --m $(default_num_features) --outfile $(default_test_dataset_name) --plot_file $(default_test_plot_name) || (echo "On Mac OS X, matplotlib needs to use a framework build; retrying."; pythonw make_dataset.py --n $(default_test_dataset_size) --m $(default_num_features) --outfile $(default_test_dataset_name) --plot_file $(default_test_plot_name))
 
+docker:
+	echo "Building the docker image and running the container."
+	docker build -t toy_nn_image .
+	docker run --name toy_nn_container -it toy_nn_image
+
 clean:
 	rm $(default_train_dataset_name)
 	rm $(default_test_dataset_name)
