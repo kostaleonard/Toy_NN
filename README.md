@@ -13,7 +13,7 @@ On systems that already have TensorFlow and all dependencies installed (probably
 make
 ```
 
-On any other system (probably your machine!), run the project in a Docker container.
+On any other system (probably your machine!), run the project in a Docker container. This may require use of `sudo`.
 ```make docker
 make
 ```
